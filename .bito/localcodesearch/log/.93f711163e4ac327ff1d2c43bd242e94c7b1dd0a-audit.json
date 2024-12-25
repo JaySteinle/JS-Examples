@@ -1,0 +1,30 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 30
+    },
+    "auditLog": "c:\\Users\\jayst\\.bito\\localcodesearch\\log\\.93f711163e4ac327ff1d2c43bd242e94c7b1dd0a-audit.json",
+    "files": [
+        {
+            "date": 1730237309471,
+            "name": "c:\\Users\\jayst\\.bito\\localcodesearch\\log\\log.json-2024-10-29-16.log",
+            "hash": "8ddf46fe3b6b8717073bbe075e6595c00a624427e224d863f10ab2078ce1fd57"
+        },
+        {
+            "date": 1730506480961,
+            "name": "c:\\Users\\jayst\\.bito\\localcodesearch\\log\\log.json-2024-11-01-19.log",
+            "hash": "49e14e157299f7381d427631c594e98f00939a751cecb773b2f0b29d9e1a8054"
+        },
+        {
+            "date": 1730674557051,
+            "name": "c:\\Users\\jayst\\.bito\\localcodesearch\\log\\log.json-2024-11-03-16.log",
+            "hash": "6540e7c19f7100803747dc72afab228bdb3e6bf75088e36ee8b0157b19c7376a"
+        },
+        {
+            "date": 1731096558783,
+            "name": "c:\\Users\\jayst\\.bito\\localcodesearch\\log\\log.json-2024-11-08-14.log",
+            "hash": "744769c5fa38a677dc0fc9a2fb3d8655d167c04f2828a6ea3b1fb4c94dbe0621"
+        }
+    ],
+    "hashType": "sha256"
+}
