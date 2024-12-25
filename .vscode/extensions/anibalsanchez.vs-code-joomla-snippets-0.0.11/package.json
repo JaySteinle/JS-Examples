@@ -1,0 +1,63 @@
+{
+	"name": "vs-code-joomla-snippets",
+	"publisher": "AnibalSanchez",
+	"displayName": "Joomla Snippets",
+	"description": "Snippets for Joomla. Including Joomla 3.x and Joomla 4 Snippets.",
+	"icon": "images/joomla.png",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/anibalsanchez/VSCode-Joomla-Snippets.git"
+	},
+	"bugs": {
+		"url": "https://github.com/anibalsanchez/VSCode-Joomla-Snippets/issues"
+	},
+	"homepage": "https://github.com/anibalsanchez/VSCode-Joomla-Snippets#readme",
+	"version": "0.0.11",
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"keywords": [
+		"Joomla",
+		"PHP"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "php",
+				"path": "./snippets/php.json"
+			}
+		]
+	},
+	"scripts": {
+		"build": "npm run build_snippets; npm run build_readme; npm run dups; npm run countPHP",
+		"publish": "npm version patch; vsce publish; git push",
+		"patch": "npm version patch",
+		"install": "npm run build; vsce package; code --install-extension *.vsix",
+		"build_snippets": "npm run build_php",
+		"build_php": "cat src/snippets.json > snippets/php.json",
+		"build_readme": "cat src/README_top.md > README.md; npm run generate_readme_table; cat src/README_bottom.md >> README.md;",
+		"generate_readme_table": "cat src/snippets.json | grep 'prefix\\|description' | sed -e \"s/description//\" | sed -e \"s/prefix//\" | sed -e 's/    \"\": \"//' | sed -e 's/\",//' | sed -e 'N;s/\\n/ | /' | sed -e 's/$/ |/g' | sed -e 's/^/| /' | sort  >> README.md",
+		"dups": "npm run dup_snippet; npm run dup_name",
+		"dup_snippet": "cat src/snippets.json | grep '\": {' | sort | uniq -d",
+		"dup_name": "cat src/snippets.json | grep 'prefix' | sort | uniq -d",
+		"countPHP": "cat snippets/php.json | grep 'prefix' | wc"
+	},
+	"__metadata": {
+		"id": "1c9a7936-821c-40e3-a8ba-a8d9659f2bc9",
+		"publisherId": "8d892cce-55cf-4ea3-a51a-fae21a9c5c74",
+		"publisherDisplayName": "Anibal Sanchez",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1729640499478,
+		"pinned": false,
+		"preRelease": false,
+		"source": "gallery",
+		"size": 73836
+	}
+}

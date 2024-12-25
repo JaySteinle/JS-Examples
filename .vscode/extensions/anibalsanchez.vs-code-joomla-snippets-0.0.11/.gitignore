@@ -1,0 +1,8 @@
+.editorconfig
+.eslintrc.json
+.gitkeep
+.jsbeautifyrc
+.jshintrc
+.markdownlint.json
+.vscode
+*.vsix
